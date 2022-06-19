@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Recuperatorio Pr&aacute;ctica - 1er. Trimestre FINALTarea</title>
+    <style>
+        body{
+            background-color: purple;
+        }
+        #portaPaisaje {
+            position: relative;
+            width: 50vw;
+            height: 50vh;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            top: 25%;
+            background-color: lightpink;
+            display: block;
+        }
+
+        #fotoPaisaje {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        @media screen and (orientation:portrait) {
+            #portaPaisaje {
+                max-width: 600px;
+                max-height: 900px;
+                background-color: cyan;
+            }
+
+        @media screen and (orientation:landscape) {
+            #portaPaisaje {
+                max-width: 1200px;
+                max-height: 800px;
+                background-color: cyan;
+            }
+
+        }
+        }
+    </style>
+</head>
+<body>
+        <picture id="portaPaisaje">
+            <!-- 
+            Opciones de imagenes responsivas
+            tamaño (ancho x alto)
+            horizontales        verticales
+            1920x1200           900x1200         
+            800x500             400x600
+            -->
+            <!-- Imagenes grandes -->
+            <source media="(orientation: landscape) and (min-width: 801px)" srcset="./fondo3.heic" type="image/heic">
+            <source media="(orientation: landscape) and (min-width: 801px)" srcset="./fondo3.webp" type="image/webp">
+            <source media="(orientation: landscape) and (min-width: 801px)" srcset="./fondo3.jpg" type="image/jpg">
+            <source media="(orientation: portrait) and (min-width: 401px)" srcset="./fondo1.heic" type="image/heic">
+            <source media="(orientation: portrait) and (min-width: 401px)" srcset="./fondo1.webp" type="image/webp">
+            <source media="(orientation: portrait) and (min-width: 401px)" srcset="./fondo1.jpg" type="image/jpg">
+            <!-- Imagenes pequeñas -->
+            <source media="(orientation: landscape) and (max-width: 800px)" srcset="./fondo4.heic" type="image/heic">
+            <source media="(orientation: landscape) and (max-width: 800px)" srcset="./fondo4.webp" type="image/webp">
+            <source media="(orientation: landscape) and (max-width: 800px)" srcset="./fondo4.jpg" type="image/jpg">
+            <source media="(orientation: portrait) and (max-width: 400px)" srcset="./fondo2.heic" type="image/heic">
+            <source media="(orientation: portrait) and (max-width: 400px)" srcset="./fondo2.webp" type="image/webp">
+            <source media="(orientation: portrait) and (max-width: 400px)" srcset="./fondo2.jpg" type="image/jpg">
+            <img
+                id="fotoPaisaje"
+                alt="Foto de un paisaje"
+                title="Un paisaje conocido"
+                src="./grande1.jpg"/>
+        </picture>
+</body>
+</html>
